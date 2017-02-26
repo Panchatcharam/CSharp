@@ -1,0 +1,9 @@
+F:\temp\ThreadCSharp\ThreadCSharp\bin\Debug\ThreadCSharp.exe.config
+F:\temp\ThreadCSharp\ThreadCSharp\bin\Debug\ThreadCSharp.exe
+F:\temp\ThreadCSharp\ThreadCSharp\bin\Debug\ThreadCSharp.pdb
+F:\temp\ThreadCSharp\ThreadCSharp\obj\Debug\ThreadCSharp.csprojResolveAssemblyReference.cache
+F:\temp\ThreadCSharp\ThreadCSharp\obj\Debug\ThreadCSharp.Form1.resources
+F:\temp\ThreadCSharp\ThreadCSharp\obj\Debug\ThreadCSharp.Properties.Resources.resources
+F:\temp\ThreadCSharp\ThreadCSharp\obj\Debug\ThreadCSharp.csproj.GenerateResource.Cache
+F:\temp\ThreadCSharp\ThreadCSharp\obj\Debug\ThreadCSharp.exe
+F:\temp\ThreadCSharp\ThreadCSharp\obj\Debug\ThreadCSharp.pdb

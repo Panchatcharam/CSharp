@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace ThreadCSharp
 {
@@ -18,15 +18,15 @@ namespace ThreadCSharp
             using (StreamWriter writer = File.AppendText("log.txt"))
             {
                 // Get the user input from the console
-                while ((inputString = Console.ReadLine()) != "")
+                while ((inputString = Console.ReadLine()) != "exit")
                 {
                     // Please not here that the using variable
                     // can not be passed as `ref` or `out`. They 
                     // are being treated as a read only.
                     FormatAndWrite(ref inputString, writer);
-                    
+
                     // Sleep for sometime for letting other threads if any to run.
-                    Thread.Sleep(1);
+                    Task.Delay(10);
                 }
             }
         }

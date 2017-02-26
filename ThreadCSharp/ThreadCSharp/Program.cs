@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading;
+using System.Threading.Tasks;
 
 namespace ThreadCSharp
 {
@@ -11,24 +11,19 @@ namespace ThreadCSharp
             WorkerThread wThread = new WorkerThread();
 
             // Create thread, Here the ThreadStart is a delegate
-            Thread thrdObj = new Thread(new ThreadStart(wThread.HandleInput));
+            Task thrdObj = Task.Factory.StartNew(() => wThread.HandleInput());
 
-            // Start the thread
-            thrdObj.Start();
+            Form1 form = new Form1();
+            Task thrForm = Task.Factory.StartNew(() => form.HandleForm());
 
-            Console.WriteLine("Wait for thread to become alive");
-
-            // Wait until thread to become alive
-            while (!thrdObj.IsAlive) ;
-
-            Console.WriteLine("Thread is alive");
-
-            // Wait for the thread to finish
-            thrdObj.Join();
+            Task.WaitAll(thrdObj,thrForm);
 
             Console.WriteLine("All is Well!, Press any key to Exit...");
-
             Console.ReadLine();
+            if (form.IsAccessible)
+            {
+                form.Close();
+            }
         }
     }
 }
